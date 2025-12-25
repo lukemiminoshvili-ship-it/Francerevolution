@@ -32,7 +32,6 @@ const EventDetail: React.FC = () => {
   return (
     <Layout>
       <div className="max-w-5xl mx-auto">
-        {/* Back Button */}
         <button 
           onClick={handleBack}
           className="mb-12 flex items-center gap-4 text-stone-500 hover:text-[#c5a059] transition-all group font-bold tracking-[0.3em] uppercase text-xs"
@@ -41,8 +40,7 @@ const EventDetail: React.FC = () => {
           არქივში დაბრუნება
         </button>
 
-        <article className="bg-[#1e1a16] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)] border border-stone-800 relative">
-          {/* Ornate corners */}
+        <article className="bg-[#1e1a16] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)] border border-stone-800 relative overflow-hidden">
           <div className="absolute top-6 left-6 w-16 h-16 border-t-2 border-l-2 border-stone-800 pointer-events-none opacity-50"></div>
           <div className="absolute top-6 right-6 w-16 h-16 border-t-2 border-r-2 border-stone-800 pointer-events-none opacity-50"></div>
           <div className="absolute bottom-6 left-6 w-16 h-16 border-b-2 border-l-2 border-stone-800 pointer-events-none opacity-50"></div>
@@ -91,23 +89,6 @@ const EventDetail: React.FC = () => {
                   </footer>
                 </blockquote>
               )}
-            </div>
-
-            <div className="mt-28 flex flex-col md:flex-row justify-between items-center gap-10 border-t border-stone-800 pt-16">
-               <div className="text-[9px] text-stone-700 uppercase tracking-[0.6em] font-black">
-                  არქივის სერია: FR-REV-MOD-0{event.id.length}
-               </div>
-               <div className="flex gap-10">
-                 <button 
-                    onClick={() => window.print()}
-                    className="text-stone-600 hover:text-[#c5a059] transition-all text-xs flex items-center gap-3 uppercase tracking-[0.4em] font-black"
-                 >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
-                    </svg>
-                    ბეჭდვა
-                 </button>
-               </div>
             </div>
           </div>
         </article>
